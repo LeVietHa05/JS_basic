@@ -103,3 +103,26 @@ class Dogs extends Pet{ //có thể tạo một method mới có tên trùng v�
         return "WOOOFFFF"
     }
 }
+
+const createObj = () => {
+    return {
+        _meal : '',
+        _price: 0,
+        get something() {
+            return (`${this._meal} is ${this._price}`)
+        } ,
+        set meal(inp) {
+            this._meal = inp;
+        },
+        set price(inp) {
+            this._price = inp
+        }
+    }
+}
+
+let testObj = createObj()
+console.log(testObj);
+testObj._meal = 'kf'
+testObj.meal = 'abc'
+console.log(testObj._meal);
+console.log(testObj);

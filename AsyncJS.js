@@ -28,39 +28,39 @@
 // })
 
 //promise
-// function successfulCallback (result){
-//     console.log('the data is ready: ' + result);
-// }
-// function failureCallback (error) {
-//     console.log('fail to get the data: ' + error);
-// }
-// const doSomething = (url ) =>  {
-//     return new Promise((resolve, reject) => {
-//         const delay =  Math.floor(Math.random() * 4000) + 500;
-//         setTimeout(() => {
-//             if ( delay > 3500) {
-//                 reject('Connection timeout !!!');
-//             } else {
-//                 resolve(`Here is your data from ${url}`);
-//             }
-//         }, delay)
-//     })
-// }
+function successfulCallback (result){
+    console.log('the data is ready: ' + result);
+}
+function failureCallback (error) {
+    console.log('fail to get the data: ' + error);
+}
+const doSomething = (url ) =>  {
+    return new Promise((resolve, reject) => {
+        const delay =  Math.floor(Math.random() * 4000) + 500;
+        setTimeout(() => {
+            if ( delay > 3500) {
+                reject('Connection timeout !!!');
+            } else {
+                resolve(`Here is your data from ${url}`);
+            }
+        }, delay)
+    })
+}
 
-// doSomething('google.com')
-//     .then( (data) => {
-//         console.log('It is working, google');
-//         console.log(data);
-//         return doSomething('facebook.com');     
-//     })
-//     .then ( (data) => {
-//         console.log('it is working, facebook');
-//         console.log(data);
-//     })
-//     .catch( (error) => {
-//         console.log('fail to load');
-//         console.log(error)
-//     })
+doSomething('google.com')
+    .then( (data) => {
+        console.log('It is working, google');
+        console.log(data);
+        return doSomething('facebook.com');     
+    })
+    .then ( (data) => {
+        console.log('it is working, facebook');
+        console.log(data);
+    })
+    .catch( (error) => {
+        console.log('fail to load');
+        console.log(error)
+    })
 
 
 
@@ -80,7 +80,7 @@
 //     .then (() => colorChange('blue', 1000))
 //     .then (() => colorChange('indigo', 1000))
 //     .then (() => colorChange('violet', 1000))
-c
+
 
 //async
 

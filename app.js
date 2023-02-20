@@ -148,3 +148,5 @@ let asf2 = as.concat(as, 'asga g', as21, asf12)
 let asf3 = as + as + 'asga g' + as21 + asf12
 console.log(asf2);
 console.log(asf3);
+
+

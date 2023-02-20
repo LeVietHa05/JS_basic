@@ -70,7 +70,6 @@ obj = [
     rPoint: 400,
     wPoint: 200,
     mPoint: 233,
-    satPoint: 833,
   },
   {
     name: "abgsdgc",
@@ -78,7 +77,6 @@ obj = [
     rPoint: 300,
     wPoint: 280,
     mPoint: 310,
-    satPoint: 890,
   },
   {
     name: "absgdsc",
@@ -86,7 +84,6 @@ obj = [
     rPoint: 360,
     wPoint: 190,
     mPoint: 250,
-    satPoint: 800,
   },
   {
     name: "asdbc",
@@ -94,7 +91,6 @@ obj = [
     rPoint: 250,
     wPoint: 350,
     mPoint: 400,
-    satPoint: 1000,
   },
 ];
 //
@@ -103,8 +99,8 @@ function diemSAT(arr) {
     [name]: rPoint + wPoint + mPoint,
   }));
 }
-
-console.log(diemSAT(obj));
+const maxSat = Math.max(...diemSAT(obj).map((el) => Object.values(el)));
+console.log(obj.find(el => el.satPoint === maxSat));
 
 function thongTinHocSinhNam(arr) {
   let output = arr.filter(function (e) {
@@ -148,3 +144,53 @@ function minSat(arr) {
 }
 
 console.log(minSat(obj));
+
+
+obj1 = [
+  {
+    name: "abc",
+    gender: "xcz",
+    rPoint: 400,
+    wPoint: 200,
+    mPoint: 233,
+  },
+  {
+    name: "abgsdgc",
+    gender: "xcz",
+    rPoint: 300,
+    wPoint: 280,
+    mPoint: 310,
+  },
+  {
+    name: "absgdsc",
+    gender: "xczsdg",
+    rPoint: 360,
+    wPoint: 190,
+    mPoint: 250,
+  },
+  {
+    name: "asdbc",
+    gender: "xczsdg",
+    rPoint: 250,
+    wPoint: 350,
+    mPoint: 400,
+  },
+];
+
+function maxSat(arr, wantName) {
+  if (wantName) {
+    return arr.reduce((pre, cur) => {
+      let satPointA = pre.rPoint + pre.wPoint + pre.mPoint;
+      let satPointB = cur.rPoint + cur.wPoint + cur.mPoint;
+      return satPointA > satPointB ? pre : cur;
+    }).name
+  } else {
+    return arr.reduce((pre, cur) => {
+      let satPointA = pre.rPoint + pre.wPoint + pre.mPoint;
+      let satPointB = cur.rPoint + cur.wPoint + cur.mPoint;
+      return satPointA > satPointB ? pre : cur;
+    })
+  }
+}
+
+console.log(maxSat(obj1, false))

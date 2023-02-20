@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loop</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loop</title>
 </head>
+
 <body>
-    <h1>loop</h1>
-    
-    <script src="AJAX.js">
-        while (true) {
-    let userInput = prompt('nhap so');
-    if (userInput === 'q')  break;
-}
-    </script>
+  <h1>TODO LIST</h1>
+
+  <script>
+    let userInput = prompt('what do u want to do');
+    const todoList = ['eat', 'drink'];
+    while (userInput.toLowerCase() !== 'quit') {
+      if (userInput.toLowerCase() === 'list') {
+        console.log('*****************"');
+        for (let i = 0; i < todoList.length; i++) {
+          console.log(`${i}: ${todoList[i]}`);
+        }
+        console.log('*****************"');
+      } else if (userInput.toLowerCase() === 'new') {
+        const newJop = prompt('oke, what is the new job?');
+        todoList.push(newJop);
+        console.log(`${newJop} added to the list`);
+      } else if (userInput.toLowerCase() === 'delete') {
+        const index = parseInt(prompt('enter the index to delete'));
+        if (!Number.isNaN(index) && index < todoList.length) {
+          const deleted = todoList.splice(index, 1);
+          console.log(`${deleted} is deleted from the list`);
+        } else console.log('invalid index');
+      }
+      userInput = prompt('what do u want to do');
+    }
+    console.log('oke. now quitting')
+  </script>
 </body>
+
 </html>
