@@ -98,6 +98,27 @@ let str = 'To be, or not to be, that is the question.';
 //split([seperator], [limit])
 //biến 1 chuỗi thành 1 mảng các chuỗi, bằng cách tách chuỗi theo ký tự dc chỉ định
 let str = 'Leave me alone plz';
+```
 
+# bài tập 1
+viết hoa toàn bộ chữ cái đầu của từ trong một chuỗi (capitalize giống trong css)
+``` js
+let a = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea esse vitae quidem. Ratione, debitis. Blanditiis officiis possimus tempore sequi saepe ex aliquam fugiat quidem. Libero ab impedit nemo alias nesciunt!'
+
+// wanted output: Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Ea Esse Vitae Quidem. Ratione, Debitis. Blanditiis Officiis Possimus Tempore Sequi Saepe Ex Aliquam Fugiat Quidem. Libero Ab Impedit Nemo Alias Nesciunt!
+//yêu cầu: string và array
+//gợi ý: dùng split(' ') và dùng toUpperCase cho charAt(0). dùng thêm join của array.
+```
+# bài tập 2: 
+vẫn dùng string a ở trên. viết hàm trả về mảng bao gồm toàn bộ các vị trí của dấu cách " ".
+
+``` js 
+/* wanted output: [
+    5,  11,  17,  21,  26,  38,  50,  56,
+   59,  64,  70,  78,  87,  96, 107, 116,
+  125, 133, 139, 145, 148, 156, 163, 171,
+  178, 181, 189, 194, 200
+]
+*/
 
 ```

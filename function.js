@@ -10,14 +10,18 @@ function sing(songName) {
 let x = 10;
 let a = 10;
 function add(x, y) {
+  let a = 5;
   if (typeof x !== "number" || typeof y !== "number") {
     return false;
   }
   a = a + x;
+  console.log(a)
   return x + y;
   console.log(x + y);
   console.log("askjb");
 }
+console.log(add(1, 2));
+console.log(a)
 
 function sumArray(array) {
   let total = 0;
@@ -50,3 +54,14 @@ const hen = {
     return "EGG";
   },
 };
+
+
+//reverse number 
+function reverseNumber(number) {
+  let reversedNumber = 0;
+  while (number !== 0) {
+    reversedNumber = reversedNumber * 10 + (number % 10);
+    number = Math.floor(number / 10);
+  }
+  return reversedNumber;
+} 

@@ -194,3 +194,5 @@ function maxSat(arr, wantName) {
 }
 
 console.log(maxSat(obj1, false))
+
+
