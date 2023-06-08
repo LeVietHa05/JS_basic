@@ -36,6 +36,7 @@ const kvArray = [
   { num: 3, score: 30 },
 ];
 
+
 //forEach & arrow function
 numbers.forEach((el, index, arr) => {
   if (el % 2 === 0) {
@@ -102,20 +103,20 @@ const isEven1 = (x) => {
   //bản rút gọn dùng arrow
   return x % 2 === 0;
 };
-const isEven2 = (x) => {
+const isEven2 = x => {
   //bản rút gọn bỏ ()
   return x % 2 === 0;
 };
-const isEven3 = (x) => {
+const isEven3 = x => {
   x % 2 === 0;
 }; //ngầm hiểu là có return, chỉ được có một dòng code duy nhất
-const isEven4 = (x) => x % 2 === 0; //ngầm hiểu là có return, chỉ được có một dòng code duy nhất.
+const isEven4 = x => x % 2 === 0; //ngầm hiểu là có return, chỉ được có một dòng code duy nhất.
 
 //setTimeOut && setInterval
 setTimeout(() => {
   console.log("Hello!!"); //hello sau 3 giay, chay 1 lan, ham nay la ham callback
   //phan code phia sau van chay ngay lap tuc
-}, 0);
+}, 3000);
 console.log("gooodbye"); //dong code nay se chay ngay, khong co delay gi.
 
 /**luu id lai de co the dung lai */
@@ -165,7 +166,7 @@ const isAllEven2 = (x) => !x.some((num) => num % 2 === 1);
 const sum = numbers.reduce((total, currentvalue) => total + currentvalue);
 
 //đoạn code trên tương đương với đoạn dưới đây
-let sum1 = 5;
+let sum1 = 0;
 for (num of numbers) {
   sum1 += num;
 }
@@ -173,7 +174,7 @@ for (num of numbers) {
 const minNum = numbers.reduce((min, currentvalue) =>
   min > currentvalue ? currentvalue : min
 );
-console.log(min);
+console.log(minNum);
 //trải phẳng mảng 2 chiều, hoặc nhiều hơn
 let testArray = [
   [0, 1],
@@ -219,16 +220,17 @@ const id3 = setInterval(() => {
 }, 3000);
 console.log("hello 2");
 
-let obj = {
-  name: "bbbb",
-  age: 12,
-}(({ name, a } = { name: "bbb", age: 14, gender: "male" }));
+// let obj = {
+//   name: "bbbb",
+//   age: 12,
+// }
+//   (({ name, age } = { name: "bbb", age: 14, gender: "male" }));
 
-console.log(name);
-// expected output: 10
+// console.log(name);
+// // expected output: 10
 
-console.log(a);
-// expected output: 20
+// console.log(a);
+// // expected output: 20
 
 const arr = [
   [5, 10, 15, 20, 5],

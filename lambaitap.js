@@ -195,4 +195,43 @@ function maxSat(arr, wantName) {
 
 console.log(maxSat(obj1, false))
 
+//bai tap ben callback (object sua doi)
+const classroom = [
+  {
+    name: 'Nguyen Van A',
+    age: 16,
+    gender: "M",
+    favourite: ['reading', 'coding', 'workout'],
+    abroad: true,
+  },
+  {
+    name: 'Nguyen Van B',
+    age: 16,
+    gender: "M",
+    favourite: ['gaming', 'coding'],
+    abroad: false,
+  },
+  {
+    name: 'Nguyen Thi A',
+    age: 17,
+    gender: "F",
+    favourite: ['singing'],
+    abroad: true,
+  },
+  {
+    name: 'Nguyen Thi B',
+    age: 18,
+    gender: "F",
+    favourite: ['writing', 'music', 'chatting'],
+    abroad: true,
+  },
+]
 
+const codeingStudents = classroom.map((el) => {
+  if (el.favourite.includes('coding')) {
+    return el
+  } else {
+    
+  }
+})
+console.log(codeingStudents);

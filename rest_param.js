@@ -37,12 +37,12 @@ console.log(kq2); // ['a', 'c']
 function tingTong(...args) {
     let tong = 0;
     for (const x of args) {
-        if (typeof x === 'number') 
-        tong += x;
+        if (typeof x === 'number')
+            tong += x;
     }
     return tong;
 }
-console.log(tingTong(12,21));
+console.log(tingTong(12, 21));
 
 /**
  * 
@@ -56,3 +56,21 @@ function multiply(multiplier, ...args) {
 let mulTest = multiply(3, 5, 7, 12);
 console.log(mulTest);
 
+function sum(a, b, c) {
+    // let c = 0;
+    // for (let i = 0; i < abc.length; i++) {
+    //     c += abc[i];
+    // }
+    // c += a + b;
+    return c + b + a
+}
+
+let nums = [1, 2, 3]
+let toPush = [3, 4, 5]
+// nums = [...nums, ...toPush]
+
+// console.log(sum(...nums));
+let a, ab, abc ,d, e, f
+[a, ab, abc, d =3, e=5, f=4] = nums
+
+console.log(a, ab, abc, d, e, f);

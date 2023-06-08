@@ -47,3 +47,10 @@ switch (true) {
     console.log("default");
   }
 }
+
+
+// 0 - 5; 5 - 10; 10 - 65; > 65
+
+let age = 60;
+let giaTien = age >= 0 && age <= 5 || age > 65 ? 'Free' : age > 5 && age <= 10 ? "$5" : age > 10 && age <= 65 ? "$10" : "$5";
+console.log(giaTien);
