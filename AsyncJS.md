@@ -112,9 +112,9 @@ sử dụng try catch
 ``` jsx
 async function doTwoThings() {
     try {
-        let data1 = doSomething('google.com')
+        let data1 = await doSomething('google.com')
         console.log(data1)
-        let data2 = doSomething('facebook.com')
+        let data2 = await doSomething('facebook.com')
         console.log(data2)
     }
     catch (e) {

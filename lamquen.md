@@ -7,6 +7,13 @@
 let name = "Tuan Phong"; 
 let age = 10; 
 let isBoy = true;
+const pi = 3.14;
+
+//camelCase ;
+let tinhTong, isGirl, tinhChuViHinhTron;
+let a = null;
+
+
 ```
 
 - Các kiểu dữ liệu cơ bản (Primitives variable)

@@ -231,7 +231,89 @@ const codeingStudents = classroom.map((el) => {
   if (el.favourite.includes('coding')) {
     return el
   } else {
-    
+
   }
 })
 console.log(codeingStudents);
+
+
+
+// bt: kiem tra so luong ky tu giong nhau trong 2 chuoi
+let str1 = "gagagw"
+let str2 = "aisdgfij"
+
+/**
+ * get same char?
+ * @param {String} str1 string 1
+ * @param {String} str2 string2
+ * @returns forgot
+ */
+function getSameChar(str1, str2) {
+  let output = {}
+  let count = 0;
+  for (let i = 0; i < str1.length; i++) {
+    output[str1[i]] = str2.includes(str1[i])
+  }
+  for (let key in output) {
+    if (output[key] == true) {
+      for (let i = 0; i < str1.length; i++) {
+        if (key == str1[i]) {
+          count++
+        }
+      }
+      for (let i = 0; i < str2.length; i++) {
+        if (key == str2[i]) {
+          count++
+        }
+      }
+      output[key] = count
+      count = 0
+    }
+  }
+
+  return output
+}
+console.log(getSameChar(str1, str2));
+
+//for loop 
+for (i = 1; i < 1000; i = i * 9) {
+  console.log(i)
+}
+
+//while loop 
+let i = 0
+do {
+  console.log(i)
+  i = i + 100
+} while (i < 100)
+
+let isDead = false
+while (!isDead) {
+  console.log("alive")
+}
+setTimeout(() => {
+  isDead = true
+})
+
+
+let a = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque alias eligendi, itaque asperiores quam nam repellat fuga corporis hic omnis magnam tempore voluptatibus? Maiores recusandae sapiente hic provident eligendi tenetur"
+
+let c = a.split(" ");
+for (let i = 0; i < c.length; i++) {
+  c[i] = c[i][0].toUpperCase() + c[i].slice(1).toLowerCase()
+}
+
+
+let b = c.join(" ")
+console.log(b)
+
+let max = Math.max(1, 2, 3, 10, 4, 5, 6, 7, 8, 9)
+console.log(max)
+
+
+function randomNum(a = b - 1, b = 1) {
+  return 4, 6;
+  return [Math.floor(Math.random() * (b - a + 1)) + a, Math.floor(Math.random() * (b - a + 1)) + a]
+}
+
+console.log(randomNum(10, 1))

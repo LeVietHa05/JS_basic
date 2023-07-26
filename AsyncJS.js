@@ -7,15 +7,15 @@
 
 //callBack
 
-// setTimeout( () => {
-//     document.body.style.backgroundColor = 'brown';
-//     setTimeout(()=>{
-//         document.body.style.backgroundColor = 'yellow';
-//         setTimeout(()=>{
-//             document.body.style.backgroundColor = 'orange';
-//         }, 1000)
-//     }, 1000)
-// }, 1000)
+setTimeout( () => {
+    document.body.style.backgroundColor = 'brown';
+    setTimeout(()=>{
+        document.body.style.backgroundColor = 'yellow';
+        setTimeout(()=>{
+            document.body.style.backgroundColor = 'orange';
+        }, 1000)
+    }, 1000)
+}, 1000)
 
 // const colorChange = (newColor, delay, doNext) => {
 //     setTimeout(()=>{

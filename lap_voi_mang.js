@@ -171,6 +171,11 @@ function deletekytu (arr) {
 
 
 //bubble sort
+/**
+ * 
+ * @param {Array} arr mang dau vao
+ * @returns mang da sap xep
+ */
 function bubbleSort(arr) {
   let sovonglap = 0;
   for (let i =0; i < arr.length  ; i ++){

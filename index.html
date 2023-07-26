@@ -10,8 +10,72 @@
 
 <body>
   <h1>TODO LIST</h1>
+  <label for="add-input">ADD: </label>
+  <input type="text" id="add-input">
+  <button id="add-btn">ADD</button>
+  <br>
+  <label for="delete-input">DELETE: </label>
+  <input type="text" id="delete-input">
+  <button id="delete-btn">DELETE</button>
+  <br>
+  <h2>LIST: </h2>
+  <ol id="list">
 
+  </ol>
   <script>
+    const colorChange = (color, delay) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          document.body.style.backgroundColor = color;
+          resolve();
+        }, delay)
+      })
+    }
+
+    // colorChange('red', 1233)
+    //   .then(() => colorChange('orange', 1000))
+    //   .then(() => colorChange('yellow', 1000))
+    //   .then(() => colorChange('green', 1000))
+    //   .then(() => colorChange('blue', 1000))
+    //   .then(() => colorChange('indigo', 1000))
+    //   .then(() => colorChange('violet', 1000))
+    const rainbow = async () => {
+      await colorChange('red', 1000);
+      colorChange('orange', 1000);
+    }
+    rainbow();  
+  </script>
+  <!-- <script>
+    const add_btn = document.querySelector('#add-btn');
+    const delete_btn = document.querySelector('#delete-btn');
+    const list = document.querySelector('#list');
+    const todoList = ['eat', 'drink'];
+    for (let i = 0; i < todoList.length; i++) {
+      const newLi = document.createElement('li');
+      newLi.innerText = todoList[i];
+      list.appendChild(newLi);
+    }
+
+    add_btn.addEventListener('click', function(e) {
+      const newJop = document.querySelector("#add-input").value;
+      todoList.push(newJop);
+      const newLi = document.createElement('li');
+      newLi.innerText = newJop;
+      list.appendChild(newLi);
+      document.querySelector("#add-input").value = '';
+    })
+
+    delete_btn.addEventListener('click', function(e) {
+      const index = parseInt(document.querySelector("#delete-input").value);
+      if (!Number.isNaN(index) && index < todoList.length && index > 0) {
+        const deleted = todoList.splice(index, 1);
+        const li = document.querySelectorAll('li');
+        li[index - 1].remove();
+        document.querySelector("#delete-input").value = '';
+      } else console.log('invalid index');
+    })
+  </script> -->
+  <!-- <script>
     let userInput = prompt('what do u want to do');
     const todoList = ['eat', 'drink'];
     while (userInput.toLowerCase() !== 'quit') {
@@ -35,7 +99,7 @@
       userInput = prompt('what do u want to do');
     }
     console.log('oke. now quitting')
-  </script>
+  </script> -->
 </body>
 
 </html>

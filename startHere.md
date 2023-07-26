@@ -1,0 +1,27 @@
+thứ tự đọc các file:
+- startHere.md
+- lamquen.md    
+- function.md
+- function.js
+- String.md
+- String.js
+- if.md
+- if.js
+- loop.md
+- loop.js
+- loop_baitap.md
+- loop_baitap.js
+- lap_voi_mang.js
+- array.md
+- array.js
+- newFeature.js
+- rest_params.js
+- object.md
+- object.js
+- callback.md
+- callback&ArrayMethods.js
+- AsyncJS.md
+- AsyncJS.js
+- AJAX.js
+- try_catch.js
+- prototype,class,oopFunction.js
