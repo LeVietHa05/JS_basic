@@ -18,8 +18,8 @@ thứ tự đọc các file:
 - rest_params.js
 - object.md
 - object.js
-- callback.md
 - callback&ArrayMethods.js
+- callback.md
 - AsyncJS.md
 - AsyncJS.js
 - AJAX.js

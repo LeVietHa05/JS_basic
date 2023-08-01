@@ -87,7 +87,7 @@ const add2 = function (x, y) {
 const square = (x) => {
   x * x;
 };
-const square1 = (x) => x * x;
+const square1 = x => x * x;
 
 const rollDice = () => Math.floor(Math.random() * 6) + 1;
 console.log(rollDice());
@@ -236,7 +236,7 @@ const arr = [
   [5, 10, 15, 20, 5],
   [15, 88, 1, 5, 7, 1],
   [1, 10, 15, 5, 20, 10],
-  [21,124,512,1,2,12,5]
+  [21,124,512,1,2,12,5, 15]
 ];
 
 //kiem tra trung lap trong 1 mang
@@ -258,6 +258,7 @@ const findDuplicate = (arr) => {
   });
   
   let newArr = test.reduce((pre, cur) => pre.concat(cur), []);
+  //newArr: [5, 10, 15, 20, 15, 88, 1, 5, 7, 1, 10, 15, 5, 20, 21, 124, 512, 1, 2, 12, 5]
   
   let result = [];
   

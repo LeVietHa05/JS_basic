@@ -24,16 +24,16 @@ const student = {
   1: 'first',
   [keyProps]: 'special key',
 }
-for (let key of Object.values(student)) {
+for (let key of Object.keys(student)) {
   console.log(key);
 }
 student.age = 22; //cap nhat gia tri
 student.major = 'ee'
-for (const key of Object.values(student)) {
-  console.log(key)
+for (const value of Object.values(student)) {
+  console.log(value)
 }
 for (const key in student) {
-console.log(student[key]);
+  console.log(student[key]);
 }
 
 JSON.abilities[0].ability.name
@@ -76,18 +76,18 @@ for (student in classroom) {
 function key_value_pairs(obj) {
   const length = Object.keys(obj).length;
   const pairs = new Array(length);
-  for (let i = 0; i < length; i ++){
+  for (let i = 0; i < length; i++) {
     pairs[i] = [Object.keys(obj)[i], Object.values(obj)[i]]
   }
   return pairs;
 }
 
-console.log(key_value_pairs({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}));
-[["red","#FF0000"],["green","#00FF00"],["white","#FFFFFF"]]
+console.log(key_value_pairs({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" }));
+[["red", "#FF0000"], ["green", "#00FF00"], ["white", "#FFFFFF"]]
 
-function colorPrinting (color) {
+function colorPrinting(color) {
   const colorArray = [];
-  for (i in color){
+  for (i in color) {
     // let tempArr = [];
     // tempArr.push(i, color[i])
     colorArray.push([i, color[i]])
@@ -95,17 +95,17 @@ function colorPrinting (color) {
   return colorArray
 }
 
-console.log(colorPrinting({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}))
+console.log(colorPrinting({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" }))
 
-function colorPrinting2 (color) {
+function colorPrinting2(color) {
   let colorArray = [];
-  for (i of Object.keys(color)){
+  for (i of Object.keys(color)) {
     colorArray.push([i]);
   };
   console.log(colorArray);
-  for (let i = 0; i < Object.keys(color).length; i ++) {
+  for (let i = 0; i < Object.keys(color).length; i++) {
     colorArray[i].push(Object.values(color)[i]);
   };
   return colorArray;
 };
-console.log(colorPrinting2({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}))
+console.log(colorPrinting2({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" }))

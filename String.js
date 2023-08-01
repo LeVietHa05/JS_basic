@@ -18,17 +18,20 @@ console.log(str1.match(/^w+/g));
 
 let a = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea esse vitae quidem. Ratione, debitis. Blanditiis officiis possimus tempore sequi saepe ex aliquam fugiat quidem. Libero ab impedit nemo alias nesciunt!'
 
-let b = a.split(' ');
+// let b = a.split(' ');
+//
+// for (let i = 0; i < b.length; i++) {
+//     //code here
+// }
+// let c = b.join(' ');
+// console.log(c);
 
-for (let i = 0; i < b.length; i++) {
-
+let d = a.split("");
+let e = [];
+for (let i = 0; i < d.length; i++) {
+    if ( d[i] == ' ') {
+        e.push(i)
+    }
 }
-let c = b.join(' ');
-console.log(c);
 
-let d = [];
-for (let i = 0; i < a.length; i++) {
-
-}
-
-console.log(d)
+console.log(e)

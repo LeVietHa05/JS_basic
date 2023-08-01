@@ -79,8 +79,10 @@ function tenHam() {
 tenHam();
 const tenham1 = function () {
     //code
+    return "ABC"
 }
 tenham1();
 const tenham2 = () => { //arrow function
     //code
 }
+console.log(tenham1())
