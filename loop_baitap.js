@@ -31,7 +31,28 @@ function uocChung(a, b) {
   }
 }
 
-console.log(uocChung ( 30, 15))
+console.log(uocChung(30, 15))
+
+/**
+ * HALL OF FAME
+ * bai 2: tim uoc chung lon nhat duoc code boi Minh Khoi 2k6 SG
+ * @param {number} c number 1
+ * @param {number} d number 2
+ * @returns {number} uoc chung lon nhat
+ */
+function MinhKhoi_GCC(c, d) {
+  if ((typeof c !== 'number') || (typeof d !== 'number'))
+    return false;
+  c = Math.abs(c);
+  d = Math.abs(d);
+  while (d) {
+    var t = d;
+    d = c % d;
+    c = t;
+  }
+  return c;
+}
+console.log(MinhKhoi_GCC(15, 45))
 /**
  * bai 3: tim so tu man
  */

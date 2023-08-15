@@ -59,16 +59,16 @@ let b1 = 10;
 /*
 let random = Math.floor(Math.random() * (b1 - a1 + 1)) + a1;
 
-function randomAB() {
-    let a1 = 1;
-    let b1 = 9;
+function randomAB(a=1, b=10) {
+    let a2 = a;
+    let b2 = b;
     console.log("a1 = " + a1);
     console.log("b1 = " + b1);
     let random = Math.floor(Math.random() * (b1 - a1 + 1)) + a1;
     return [a1, b1, random];
 }
 
-let random1 = randomAB();
+let random1 = randomAB(20,100);
 console.log(random1);
 let random2 = randomAB(1, 10000);
 */

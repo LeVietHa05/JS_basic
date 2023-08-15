@@ -275,3 +275,20 @@ const findDuplicate = (arr) => {
 };
 
 console.log(findDuplicate(arr));
+
+// callback 
+const user = [
+  { id: 1, first: 'Jon' },
+  { id: 2, first: 'Joe' },
+  { id: 3, first: 'Moe' }
+];
+const managers = [{ manager: 1, employees: [2, 3] }];
+
+const cauC = managers.map((manager) => {
+  const employees = manager.employees.map((id) => {
+    return user.find((user) => user.id === id);
+  });
+  return { ...manager, employees };
+}
+);
+console.log(cauC[0].manager);
