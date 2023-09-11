@@ -32,7 +32,7 @@ Ví dụ:
 
 ```jsx
 // Định nghĩa hàm
-function hienThiThong(so1, so2) {
+function hienThiTong(so1, so2) {
     var tong = so1 + so2;
     alert(tong);
 }

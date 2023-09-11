@@ -1,10 +1,23 @@
 # 1. định nghĩa
 
-lặp là việc thực hiện một việc gì đó lặp đi lặp lại miễn là vẫn thỏa mãn điều kiện. 
+lặp là việc thực hiện một việc gì đó lặp đi lặp lại miễn là vẫn thỏa mãn điều kiện.
 
-![Image](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ffd7ac94-8acb-4707-b8f6-b129b25a6df2/Untitled.png)
+```jsx
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
+console.log("hello world");
 
-![Image](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9c4f4263-c13e-468f-a588-80182e2d373e/Untitled.png)
+for (let i = 0; i < 10; i++) {
+  console.log("hello world");
+}
+```
 
 # 2. các cú pháp lặp
 
@@ -12,19 +25,24 @@ lặp là việc thực hiện một việc gì đó lặp đi lặp lại miễ
 
 - initialization condition: khởi tạo biến đếm, thường là let i =0;
 - testing condition: điều kiện. ví dụ là i < 10;
-- increment/decrement: thay đổi biến đếm, lên hoặc xuống một lượng nào đó. ví dụ là i=i+1, i*=2, ...
+- increment/decrement: thay đổi biến đếm, lên hoặc xuống một lượng nào đó. ví dụ là i=i+1, i\*=2, ...
 
-![Image](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ba2db0e9-4a45-422d-96b1-074841b5bcc6/Untitled.png)
-
-![Image](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/988fce2e-b223-4ae1-993c-cb1fa7bf75ea/Untitled.png)
-
+```jsx 
+for (initialization condition; testing condition; increment/decrement)
+{
+    statements..
+}
+```
 ## 2.2 while
 
-![Image](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39af69a4-ea6d-449d-aa30-dbf2948750b8/Untitled.png)
+```jsx
+    while   (condition)
+    {
+        statements..
+    }
+```
 
-![Image](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/17c8efb7-b3e0-4fdf-9992-11ed46847d8b/Untitled.png)
-
-hàm while sẽ kiểm tra điều kiện trước khi vào vòng lặp nếu điều kiện đúng. 
+hàm while sẽ kiểm tra điều kiện trước khi vào vòng lặp nếu điều kiện đúng.
 
 thường thì biến điều kiện sẽ được thay đổi trong chính vòng lặp để có thể dừng vòng lặp lại, tránh lặp vô tận.
 
@@ -34,15 +52,20 @@ lặp trong object. đây là cách để có thể duyệt qua các **key** c�
 
 ![Image](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25a9c64e-576b-4d54-92b2-c30a88c1fa33/Untitled.png)
 
-ví dụ: 
+ví dụ:
 
 ```jsx
 // creating an Object
-var languages = { first : "C", second : "Java", third : "Python", fourth : "PHP", fifth : "JavaScript" };
+var languages = {
+  first: "C",
+  second: "Java",
+  third: "Python",
+  fourth: "PHP",
+  fifth: "JavaScript",
+};
 
-for (it in languages)
-{
-console.log(it, languages[it]);
+for (it in languages) {
+  console.log(it, languages[it]);
 }
 ```
 
@@ -56,8 +79,8 @@ console.log(it, languages[it]);
 
 ```jsx
 const animals = [dog, cat, lion, cat, tiger];
-for (let i = 0 ; i < animal.length; i++) {
-	console.log(i, animals[i]);
+for (let i = 0; i < animal.length; i++) {
+  console.log(i, animals[i]);
 }
 ```
 
@@ -73,13 +96,13 @@ hai đoạn code có tác dụng gần giống nhau, trừ việc in ra số th�
 
 ```jsx
 for (let animal of animals) {
-	console.log(animal);
+  console.log(animal);
 }
 ```
 
 ```jsx
-for (let char of 'hello world') {
-    console.log(char);
+for (let char of "hello world") {
+  console.log(char);
 }
 ```
 
@@ -87,7 +110,7 @@ for (let char of 'hello world') {
 
 ```jsx
 for (let it of Object.keys(languages)) {
-	console.log(it, languages[it]);
+  console.log(it, languages[it]);
 }
 ```
 
@@ -111,7 +134,7 @@ for dành cho các vòng lặp biết trước số lần thực hiện, (số c
 
 còn while sẽ dùng trong các trường hợp không biết trước
 
-vd: isGameOver: không thể biết trước khi nào kết thúc vòng lặp được ⇒ dùng while 
+vd: isGameOver: không thể biết trước khi nào kết thúc vòng lặp được ⇒ dùng while
 
 # 3. vòng lặp vô tận, break
 
@@ -138,30 +161,30 @@ làm một cái todo list:
 - delete: xóa một việc được chọn
 - quit hoặc q: thoát app todo list ra.
 
-code mẫu: 
+code mẫu:
 
 ```jsx
-let userInput = prompt('what do u want to do');
-const todoList = ['eat', 'drink'];
-while (userInput.toLowerCase() !== 'quit'){
-    if (userInput.toLowerCase() === 'list' ){
-        console.log('*****************"');
-        for (let i = 0; i < todoList.length; i++){
-            console.log(`${i}: ${todoList[i]}`);
-        }
-        console.log('*****************"');
-    } else if (userInput.toLowerCase() === 'new') {
-        const newJop = prompt('oke, what is the new job?');
-        todoList.push(newJop);
-        console.log(`${newJop} added to the list`);
-    } else if (userInput.toLowerCase() === 'delete'){
-        const index = parseInt(prompt('enter the index to delete'));
-        if (!Number.isNaN(index) && index < todoList.length){
-            const deleted = todoList.splice(index, 1);
-            console.log(`${deleted} is deleted from the list`);
-        } else console.log('invalid index');
+let userInput = prompt("what do u want to do");
+const todoList = ["eat", "drink"];
+while (userInput.toLowerCase() !== "quit") {
+  if (userInput.toLowerCase() === "list") {
+    console.log('*****************"');
+    for (let i = 0; i < todoList.length; i++) {
+      console.log(`${i}: ${todoList[i]}`);
     }
-    userInput = prompt('what do u want to do');
+    console.log('*****************"');
+  } else if (userInput.toLowerCase() === "new") {
+    const newJop = prompt("oke, what is the new job?");
+    todoList.push(newJop);
+    console.log(`${newJop} added to the list`);
+  } else if (userInput.toLowerCase() === "delete") {
+    const index = parseInt(prompt("enter the index to delete"));
+    if (!Number.isNaN(index) && index < todoList.length) {
+      const deleted = todoList.splice(index, 1);
+      console.log(`${deleted} is deleted from the list`);
+    } else console.log("invalid index");
+  }
+  userInput = prompt("what do u want to do");
 }
-console.log('oke. now quitting')
+console.log("oke. now quitting");
 ```

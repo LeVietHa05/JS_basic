@@ -38,6 +38,30 @@ for (const key in student) {
 
 JSON.abilities[0].ability.name
 
+
+//bai 1 : 
+const characterOne = {
+  name: 'Tony Stark',
+  role: 'Iron man',
+  abilities: ['genius', 'rich', 'engineer'],
+  level: 10
+}
+
+function printAllKeysAndCountKeys(obj) {
+  // let count = 0;
+  // for (let key in obj) {
+  //   console.log(key);
+  //   count++;
+  // }
+  // return count;
+
+  const charKeys = Object.keys(obj);
+  console.log(charKeys);
+  return charKeys.length;
+}
+
+console.log(printAllKeysAndCountKeys(characterOne));
+
 const classroom = {
   1: {
     name: 'Nguyen Van A',
@@ -72,6 +96,46 @@ const classroom = {
 for (student in classroom) {
   console.log(classroom[student].name);
 }
+
+
+var library1 = [
+  {
+    title: 'Bill Gates',
+    author: 'The Road Ahead',
+    libraryID: 1254
+  },
+  {
+    title: 'Gill Gates',
+    author: 'Ohe Road Ahead',
+    libraryID: 2254
+  },
+  {
+    title: 'Till Gates',
+    author: 'Ahe Road Ahead',
+    libraryID: 3254
+  },
+  {
+    title: 'Steve Jobs',
+    author: 'Walter Isaacson',
+    libraryID: 4264
+  },
+  {
+    title: 'Mockingjay: The Final Book of The Hunger Games',
+    author: 'Suzanne Collins',
+    libraryID: 3245
+  }];
+
+const sortLibrary = (arr, field) => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i][field] > arr[i + 1][field] ? [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]] : null;
+  }
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i][field] > arr[i + 1][field] ? [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]] : null;
+  }
+  console.log(arr);
+}
+
+sortLibrary(library1, "title");
 
 function key_value_pairs(obj) {
   const length = Object.keys(obj).length;
