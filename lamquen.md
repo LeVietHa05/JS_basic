@@ -1,5 +1,4 @@
 # 1. Biến và dữ liệu
-
 - Định nghĩa: Khái niệm biến trong lập trình cũng giống khái niệm biến trong toán học, biến được dùng để đại diện cho một giá trị nào đó.
 - Bạn có thể tạo 1 biến với từ khóa `var`, toán tử gán (`=`) được sử dụng để gán giá trị cho biến, như: `var varName = value;`
 

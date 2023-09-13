@@ -14,7 +14,6 @@
  */
 
 let numbers = [247, 3211, 158, 654, 11, 894, 915, 321, 123];
-
 const movie = [
   {
     title: "Alien",
@@ -116,7 +115,7 @@ const isEven4 = x => x % 2 === 0; //ngầm hiểu là có return, chỉ được
 setTimeout(() => {
   console.log("Hello!!"); //hello sau 3 giay, chay 1 lan, ham nay la ham callback
   //phan code phia sau van chay ngay lap tuc
-}, 3000);
+}, 2000);
 console.log("gooodbye"); //dong code nay se chay ngay, khong co delay gi.
 
 /**luu id lai de co the dung lai */
@@ -236,7 +235,7 @@ const arr = [
   [5, 10, 15, 20, 5],
   [15, 88, 1, 5, 7, 1],
   [1, 10, 15, 5, 20, 10],
-  [21,124,512,1,2,12,5, 15]
+  [21, 124, 512, 1, 2, 12, 5, 15]
 ];
 
 //kiem tra trung lap trong 1 mang
@@ -256,15 +255,15 @@ const findDuplicate = (arr) => {
   let test = arr.map((e) => {
     return findDuplicateInArray(e);
   });
-  
+
   let newArr = test.reduce((pre, cur) => pre.concat(cur), []);
   //newArr: [5, 10, 15, 20, 15, 88, 1, 5, 7, 1, 10, 15, 5, 20, 21, 124, 512, 1, 2, 12, 5]
-  
+
   let result = [];
-  
+
   newArr.forEach((e) => {
     //count the number of times a value occurs in an array
-    if (newArr.filter((x) => x === e).length === test.length ) {
+    if (newArr.filter((x) => x === e).length === test.length) {
       if (!result.includes(e)) {
         result.push(e);
       }

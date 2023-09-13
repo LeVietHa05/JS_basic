@@ -114,8 +114,7 @@ let hour = 4;
 let minute = 5;
 let second = 45;
 console.log(
-  `current time is ${hour < 10 ? `0${hour}` : `${hour}`} ${
-    minute < 10 ? `0${minute}` : `${minute}`
+  `current time is ${hour < 10 ? `0${hour}` : `${hour}`} ${minute < 10 ? `0${minute}` : `${minute}`
   } ${second < 10 ? `0${second}` : `${second}`}`
 );
 

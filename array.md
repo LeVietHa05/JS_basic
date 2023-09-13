@@ -59,7 +59,7 @@ const num = num1.concat(num2) //[1,2,3,4,5,6]
 ### d, Slice
 ``` jsx
 const num3 = num.slice(3) // [4,5,6]
-const num4 = num.slcie(2, 4) //[3,4]
+const num4 = num.slice(2, 4) //[3,4]
 const num5 = num.slice(0, -1) //[1,2,3,4,5]
 ```
 ### e, splice
@@ -180,3 +180,31 @@ fruits = [’guava’, ‘dragon fruit’, ‘strawberry’, ‘orange’]
 ## bài 2: Cho 1 mảng các số tự nhiên datas. In ra “All elements are even number” nếu tất cả các phần tử của mảng là số chẵn.
 datas = [2, 3, 4, 5, 6]
 or datas = [2, 4, 6, 8]
+
+## bài 3: cho mảng: 
+``` jsx
+var library = [
+  {
+    title: "The Road Ahead",
+    author: "Bill Gates",
+    libraryID: 1254,
+  },
+  {
+    title: "Walter Isaacson",
+    author: "Steve Jobs",
+    libraryID: 4264,
+  },
+  {
+    title: "Mockingjay: The Final Book of The Hunger Games",
+    author: "Suzanne Collins",
+    libraryID: 3245,
+  },
+];
+```
+hãy thực hiện các yêu cầu sau bằng cách viết hàm có khả năng làm được hết các việc này. :)))
+1) hãy sắp xếp lại mảng trên theo thứ tự tăng dần của libraryID
+2) hãy sắp xếp lại mảng trên theo thứ tự giảm dần của libraryID
+3) hãy sắp xếp lại mảng trên theo thứ tự tăng dần của tên tác giả
+4) hãy sắp xếp lại mảng trên theo thứ tự giảm dần của tên tác giả
+5) hãy sắp xếp lại mảng trên theo thứ tự tăng dần của title
+6) hãy sắp xếp lại mảng trên theo thứ tự giảm dần của title
