@@ -115,3 +115,16 @@ function unique_char(str1) {
 }
 console.log(unique_char("thequickbrownfoxjumpsovrethelazydog"));
 
+
+//bai 6
+let str1 = "thequickbrownfoxjumpsoverthelazydog";
+let str2 = "";
+for (let i = 0; i < str1.length; i++) {
+  if (str2.indexOf(str1[i]) == -1) {
+    str2 += str1[i];
+  }
+}
+
+let a = str2.split("")
+console.log(a.reverse());
+console.log(a);

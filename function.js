@@ -1,3 +1,25 @@
+
+//function declaration
+function sing(a = 2, b = 2) {
+  console.log(a);
+  console.log(b);
+  if (a % 2 == 0) {
+    let a = 1;
+    console.log(a);
+    return "lalala";
+  } else {
+    return "another lalala"
+  }
+}
+
+let a = 8;
+//calling a function;
+console.log(sing(23, 27));
+console.log(a)
+
+
+
+
 function sing(songName) {
   if (typeof songName !== "string") {
     console.log("hey u mother fucker, that is not a song");
@@ -64,4 +86,4 @@ function reverseNumber(number) {
     number = Math.floor(number / 10);
   }
   return reversedNumber;
-} 
+}

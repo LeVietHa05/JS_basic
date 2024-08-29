@@ -23,7 +23,6 @@ if (4 % 2 == 0) {
 9 == "9"; //true, do not care about their type
 9 != "9"; //false
 9 === "9"; //false, care about their type
-9 === "9"; //true
 "a" > "b"; //false
 //so sánh string
 "A" < "Z"; //true

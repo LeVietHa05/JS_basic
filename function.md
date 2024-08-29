@@ -80,8 +80,8 @@ hienThiHoTen("Hoàng"); // Kết quả: Hoàng undefined
     }
     
     console.log(sum(5, 15));  // 20 
-    console.log(sum(7));        // 12
-    console.log(sum());          // 8
+    console.log(sum(7));        // 19
+    console.log(sum());          // 11
     ```
     
 - **Nếu bạn tham chiếu tham số chưa được khởi tạo, bạn sẽ gặp lỗi.**

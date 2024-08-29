@@ -142,7 +142,7 @@ const characterOne = {
 
 ### a. Viết hàm in ra tất cả các khóa của đối tượng
 
-### b. Viết hàm tính tổng thuộc tính của đối tượng
+### b. Viết hàm tính tổng số key của đối tượng
 
 ## Bài 2: Cho một đối tượng sau:
 

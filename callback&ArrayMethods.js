@@ -124,7 +124,7 @@ const id = setInterval(() => {
   console.log("again! 2s đã trôi qua và thực hiện lại hàm này"); //chay di chay lai voi khoang thoi gian 2s
   i++;
   if (i == 5) clearInterval(id);
-}, 2000);
+}, 500);
 
 //filter: loc mang
 const goodMovie = movie.filter((m) => m.score > 90);

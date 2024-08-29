@@ -327,3 +327,28 @@ fetch(
   .catch((err) => {
     console.log(err);
   });
+
+
+let a = [12, 3, 43, 4, 35, 326, 2436, 4327, 12]
+console.log(a[0])
+console.log(a[a.length - 1])
+console.log(a[parseInt(a.length / 2)])
+console.log(a.indexOf(305))
+
+let small = []
+for (let i = 0; i < a.length; i++) {
+  if (a[i] < 100) {
+    small.push(a[i])
+    console.log(a[i])
+  }
+}
+
+console.log(small)
+
+let b = [1, "a", true, [1, 2], { a: 1 }, null, undefined, function abc() { return 1 }]
+for (let i = 0; i < b.length; i++) {
+  console.log(b[i])
+  if (i == b.length - 1) {
+    console.log(b[i]())
+  }
+}
